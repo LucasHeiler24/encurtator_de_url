@@ -1,7 +1,7 @@
 import type { Request, Response } from "express";
 import z from "zod";
-import { signupSchema } from "../schemas/signinSchema.js";
-import { signinSchema } from "../schemas/signupSchema.js";
+import { signupSchema } from "../schemas/signupSchema.js";
+import { signinSchema } from "../schemas/signinSchema.js";
 import { prisma } from "../lib/db.js";
 import bcrypt from "bcrypt";
 import { createToken } from "../jwt/jwt.js";

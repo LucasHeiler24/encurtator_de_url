@@ -1,11 +1,6 @@
 import z from "zod";
 
-export const signupSchema = z.object({
-    full_name: z
-        .string("Informe um texto corretamente!")
-        .trim()
-        .min(3, "Informe seu nome corretamente!")
-        .nonoptional("Nome é obrigatório!"),
+export const signinSchema = z.object({
     email: z
         .email("Informe um e-mail válido!")
         .trim()
@@ -17,4 +12,4 @@ export const signupSchema = z.object({
         .nonoptional("Senha é obrigatória!")
 });
 
-export type SignupSchemaType = z.infer<typeof signupSchema>;
+export type SigninSchemaType = z.infer<typeof signinSchema>;
